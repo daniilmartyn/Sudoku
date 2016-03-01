@@ -23,30 +23,168 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKY-qc-lPB" userLabel="PuzzleView" customClass="PuzzleView" customModule="Sudoku" customModuleProvider="target">
                                         <rect key="frame" x="77" y="0.0" width="446" height="445"/>
-                                        <color key="backgroundColor" red="0.42140393659999997" green="1" blue="0.1684737647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.61704012920606921" green="1" blue="0.63057234803556228" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lKY-qc-lPB" secondAttribute="height" multiplier="1:1" id="Pxw-h1-AjN"/>
+                                            <constraint firstAttribute="width" secondItem="lKY-qc-lPB" secondAttribute="height" multiplier="1:1" id="Ykz-kt-j5V"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ykz-kt-j5V"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="Pxw-h1-AjN"/>
+                                                <include reference="Ykz-kt-j5V"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-mZ-YKC" userLabel="ButtonsView">
                                         <rect key="frame" x="77" y="445" width="446" height="135"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-2e-wbc" userLabel="1">
+                                                <rect key="frame" x="27" y="15" width="41" height="47"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-Aj-fwA">
+                                                <rect key="frame" x="27" y="73" width="41" height="39"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="7"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-db-t0B" userLabel="2">
+                                                <rect key="frame" x="76" y="15" width="44" height="46"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-mg-vEk">
+                                                <rect key="frame" x="76" y="72" width="44" height="40"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="8"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="987-Zk-gIZ">
+                                                <rect key="frame" x="128" y="15" width="42" height="47"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY3-Ii-55R">
+                                                <rect key="frame" x="128" y="74" width="42" height="37"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="9"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-gl-BuT">
+                                                <rect key="frame" x="178" y="15" width="45" height="50"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="4"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOO-RH-STc">
+                                                <rect key="frame" x="294" y="15" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="Erase"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ium-hW-ja9">
+                                                <rect key="frame" x="237" y="15" width="49" height="51"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="5"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-ma-nPX">
+                                                <rect key="frame" x="237" y="70" width="49" height="44"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="Pencil"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-AI-0di">
+                                                <rect key="frame" x="178" y="74" width="45" height="37"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="6"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-gu-laV">
+                                                <rect key="frame" x="294" y="70" width="55" height="47"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="Menu"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="dHC-mZ-YKC" secondAttribute="height" multiplier="3.3:1" id="ANI-Pv-3YB"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="dHC-mZ-YKC" secondAttribute="height" multiplier="1:1" id="Gix-Rb-Od1"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="dHC-mZ-YKC" secondAttribute="height" multiplier="1:3.3" id="RDZ-LW-i5g"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="dHC-mZ-YKC" secondAttribute="height" multiplier="1:1" id="h8T-Zv-7Bc"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RDZ-LW-i5g"/>
+                                                <exclude reference="h8T-Zv-7Bc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="ANI-Pv-3YB"/>
+                                                <exclude reference="Gix-Rb-Od1"/>
+                                                <include reference="RDZ-LW-i5g"/>
+                                                <include reference="h8T-Zv-7Bc"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67745479200000003" green="0.86613209390000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="dHC-mZ-YKC" firstAttribute="bottom" secondItem="lKY-qc-lPB" secondAttribute="bottom" id="HRN-fe-eBI"/>
                                     <constraint firstItem="lKY-qc-lPB" firstAttribute="width" secondItem="962-kb-O63" secondAttribute="width" priority="750" id="NlF-PU-w4h"/>
+                                    <constraint firstItem="dHC-mZ-YKC" firstAttribute="top" secondItem="lKY-qc-lPB" secondAttribute="top" id="Pcf-gO-RJu"/>
+                                    <constraint firstItem="lKY-qc-lPB" firstAttribute="leading" secondItem="962-kb-O63" secondAttribute="leading" id="Py4-fe-Dd2"/>
                                     <constraint firstItem="lKY-qc-lPB" firstAttribute="leading" secondItem="dHC-mZ-YKC" secondAttribute="leading" id="WJp-CB-Bis"/>
+                                    <constraint firstItem="lKY-qc-lPB" firstAttribute="height" secondItem="962-kb-O63" secondAttribute="height" priority="750" id="X8T-2N-0iY"/>
                                     <constraint firstItem="lKY-qc-lPB" firstAttribute="centerX" secondItem="962-kb-O63" secondAttribute="centerX" id="YTN-k5-mwV"/>
                                     <constraint firstItem="dHC-mZ-YKC" firstAttribute="top" secondItem="lKY-qc-lPB" secondAttribute="bottom" id="bZy-pr-Zyv"/>
                                     <constraint firstItem="lKY-qc-lPB" firstAttribute="top" secondItem="962-kb-O63" secondAttribute="top" id="eJA-eZ-Un2"/>
+                                    <constraint firstAttribute="trailing" secondItem="dHC-mZ-YKC" secondAttribute="trailing" priority="750" id="hya-0o-42e"/>
                                     <constraint firstAttribute="bottom" secondItem="dHC-mZ-YKC" secondAttribute="bottom" id="kd1-0Z-8nX"/>
+                                    <constraint firstItem="dHC-mZ-YKC" firstAttribute="leading" secondItem="lKY-qc-lPB" secondAttribute="trailing" id="x6r-El-NWN"/>
                                     <constraint firstItem="lKY-qc-lPB" firstAttribute="trailing" secondItem="dHC-mZ-YKC" secondAttribute="trailing" id="xKx-Rb-eeA"/>
+                                    <constraint firstItem="lKY-qc-lPB" firstAttribute="centerY" secondItem="962-kb-O63" secondAttribute="centerY" id="znT-1v-199"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Py4-fe-Dd2"/>
+                                        <exclude reference="X8T-2N-0iY"/>
+                                        <exclude reference="znT-1v-199"/>
+                                        <exclude reference="HRN-fe-eBI"/>
+                                        <exclude reference="Pcf-gO-RJu"/>
+                                        <exclude reference="hya-0o-42e"/>
+                                        <exclude reference="x6r-El-NWN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="NlF-PU-w4h"/>
+                                        <include reference="Py4-fe-Dd2"/>
+                                        <exclude reference="WJp-CB-Bis"/>
+                                        <include reference="X8T-2N-0iY"/>
+                                        <exclude reference="YTN-k5-mwV"/>
+                                        <exclude reference="eJA-eZ-Un2"/>
+                                        <exclude reference="xKx-Rb-eeA"/>
+                                        <include reference="znT-1v-199"/>
+                                        <include reference="HRN-fe-eBI"/>
+                                        <include reference="Pcf-gO-RJu"/>
+                                        <exclude reference="bZy-pr-Zyv"/>
+                                        <include reference="hya-0o-42e"/>
+                                        <exclude reference="kd1-0Z-8nX"/>
+                                        <include reference="x6r-El-NWN"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
