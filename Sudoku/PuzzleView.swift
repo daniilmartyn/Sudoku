@@ -25,6 +25,11 @@ class PuzzleView: UIView {
                     selectedSquare.col = col
                     selectedSquare.row = row
                     self.setNeedsDisplay()
+                    NSLog("set up the thing \(selectedSquare)")
+                } else if row == selectedSquare.row && col == selectedSquare.col{
+                    selectedSquare.row = -1
+                    selectedSquare.col = -1
+                    self.setNeedsDisplay()
                 }
             }
         }
@@ -71,7 +76,15 @@ class PuzzleView: UIView {
             CGContextFillRect(context, CGRectMake(x, y, squareSize, squareSize))
         }
 
-        for r in 0 ..< 3 {
+
+        CGContextStrokeRect(context,        // draw the border of the entire puzzle
+            CGRectMake(boardSquare.origin.x,
+                boardSquare.origin.y,
+                boardSquare.width,
+                boardSquare.height))
+        
+        CGContextSetLineWidth(context, margin * (2/3))
+        for r in 0 ..< 3 {                  // next draw the 9 big squares..
             for c in 0 ..< 3 {
                 CGContextStrokeRect(context, CGRectMake(boardSquare.origin.x + CGFloat(c) * bigSquareSize,
                     boardSquare.origin.y + CGFloat(r) * bigSquareSize,
@@ -80,8 +93,8 @@ class PuzzleView: UIView {
             }
         }
         
-        CGContextSetLineWidth(context, margin/2)
-        for r in 0 ..< 9 {
+        CGContextSetLineWidth(context, margin/3)
+        for r in 0 ..< 9 {                  // finally draw the 81 small squares
             for c in 0 ..< 9{
                 CGContextStrokeRect(context, CGRectMake(boardSquare.origin.x + CGFloat(c)*squareSize,
                     boardSquare.origin.y + CGFloat(r)*squareSize,
