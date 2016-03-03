@@ -15,6 +15,7 @@
 		89905DF41C8500AC0094E109 /* SudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905DF31C8500AC0094E109 /* SudokuTests.swift */; };
 		89905DFF1C8500AC0094E109 /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905DFE1C8500AC0094E109 /* SudokuUITests.swift */; };
 		89905E0D1C8515860094E109 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905E0C1C8515860094E109 /* PuzzleView.swift */; };
+		89B158481C87BEC000F02774 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B158471C87BEC000F02774 /* ButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		89905DFE1C8500AC0094E109 /* SudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITests.swift; sourceTree = "<group>"; };
 		89905E001C8500AC0094E109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89905E0C1C8515860094E109 /* PuzzleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		89B158471C87BEC000F02774 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				89905DE01C8500AC0094E109 /* ViewController.swift */,
 				89905DE21C8500AC0094E109 /* Main.storyboard */,
 				89905E0C1C8515860094E109 /* PuzzleView.swift */,
+				89B158471C87BEC000F02774 /* ButtonsView.swift */,
 				89905DE51C8500AC0094E109 /* Assets.xcassets */,
 				89905DE71C8500AC0094E109 /* LaunchScreen.storyboard */,
 				89905DEA1C8500AC0094E109 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				89905DE11C8500AC0094E109 /* ViewController.swift in Sources */,
 				89905DDF1C8500AC0094E109 /* AppDelegate.swift in Sources */,
+				89B158481C87BEC000F02774 /* ButtonsView.swift in Sources */,
 				89905E0D1C8515860094E109 /* PuzzleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				89905E051C8500AC0094E109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89905E061C8500AC0094E109 /* Build configuration list for PBXNativeTarget "SudokuTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				89905E081C8500AC0094E109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89905E091C8500AC0094E109 /* Build configuration list for PBXNativeTarget "SudokuUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				89905E0B1C8500AC0094E109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

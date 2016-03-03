@@ -40,80 +40,116 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-mZ-YKC" userLabel="ButtonsView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-mZ-YKC" userLabel="ButtonsView" customClass="ButtonsView" customModule="Sudoku" customModuleProvider="target">
                                         <rect key="frame" x="77" y="445" width="446" height="135"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-2e-wbc" userLabel="1">
-                                                <rect key="frame" x="27" y="15" width="41" height="47"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="1"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-Aj-fwA">
-                                                <rect key="frame" x="27" y="73" width="41" height="39"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="7"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-db-t0B" userLabel="2">
-                                                <rect key="frame" x="76" y="15" width="44" height="46"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="2"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-mg-vEk">
-                                                <rect key="frame" x="76" y="72" width="44" height="40"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="8"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="987-Zk-gIZ">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="987-Zk-gIZ">
                                                 <rect key="frame" x="128" y="15" width="42" height="47"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="3"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY3-Ii-55R">
-                                                <rect key="frame" x="128" y="74" width="42" height="37"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="9"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-gl-BuT">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNj-gl-BuT">
                                                 <rect key="frame" x="178" y="15" width="45" height="50"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="4"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOO-RH-STc">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOO-RH-STc">
                                                 <rect key="frame" x="294" y="15" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="Erase"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="30"/>
+                                                </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ium-hW-ja9">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ium-hW-ja9">
                                                 <rect key="frame" x="237" y="15" width="49" height="51"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="5"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-ma-nPX">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-ma-nPX">
                                                 <rect key="frame" x="237" y="70" width="49" height="44"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="Pencil"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="30"/>
+                                                </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-AI-0di">
-                                                <rect key="frame" x="178" y="74" width="45" height="37"/>
-                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
-                                                <state key="normal" title="6"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-gu-laV">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-gu-laV">
                                                 <rect key="frame" x="294" y="70" width="55" height="47"/>
                                                 <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
                                                 <state key="normal" title="Menu"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="30"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gca-mg-vEk">
+                                                <rect key="frame" x="129" y="74" width="44" height="40"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="8"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY3-Ii-55R">
+                                                <rect key="frame" x="181" y="76" width="42" height="37"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="9"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-2e-wbc" userLabel="1">
+                                                <rect key="frame" x="27" y="15" width="41" height="47"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="1"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-db-t0B" userLabel="2">
+                                                <rect key="frame" x="76" y="15" width="44" height="46"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="2"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-AI-0di">
+                                                <rect key="frame" x="23" y="77" width="45" height="37"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="6"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-Aj-fwA">
+                                                <rect key="frame" x="80" y="75" width="41" height="39"/>
+                                                <color key="backgroundColor" red="0.92991530895233154" green="0.85570049285888672" blue="0.65612608194351196" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="14"/>
+                                                <state key="normal" title="7"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="50"/>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
