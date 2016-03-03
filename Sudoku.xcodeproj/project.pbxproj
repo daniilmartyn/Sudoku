@@ -16,6 +16,9 @@
 		89905DFF1C8500AC0094E109 /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905DFE1C8500AC0094E109 /* SudokuUITests.swift */; };
 		89905E0D1C8515860094E109 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905E0C1C8515860094E109 /* PuzzleView.swift */; };
 		89B158481C87BEC000F02774 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B158471C87BEC000F02774 /* ButtonsView.swift */; };
+		89B1584B1C87DB9400F02774 /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89B158491C87DB9400F02774 /* hard.plist */; };
+		89B1584C1C87DB9400F02774 /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89B1584A1C87DB9400F02774 /* simple.plist */; };
+		89B1584E1C87DBEC00F02774 /* SudokuPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1584D1C87DBEC00F02774 /* SudokuPuzzle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		89905E001C8500AC0094E109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89905E0C1C8515860094E109 /* PuzzleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		89B158471C87BEC000F02774 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		89B158491C87DB9400F02774 /* hard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hard.plist; sourceTree = "<group>"; };
+		89B1584A1C87DB9400F02774 /* simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = simple.plist; sourceTree = "<group>"; };
+		89B1584D1C87DBEC00F02774 /* SudokuPuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudokuPuzzle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +112,11 @@
 				89905DE21C8500AC0094E109 /* Main.storyboard */,
 				89905E0C1C8515860094E109 /* PuzzleView.swift */,
 				89B158471C87BEC000F02774 /* ButtonsView.swift */,
+				89B1584D1C87DBEC00F02774 /* SudokuPuzzle.swift */,
 				89905DE51C8500AC0094E109 /* Assets.xcassets */,
 				89905DE71C8500AC0094E109 /* LaunchScreen.storyboard */,
+				89B158491C87DB9400F02774 /* hard.plist */,
+				89B1584A1C87DB9400F02774 /* simple.plist */,
 				89905DEA1C8500AC0094E109 /* Info.plist */,
 			);
 			path = Sudoku;
@@ -237,7 +246,9 @@
 			files = (
 				89905DE91C8500AC0094E109 /* LaunchScreen.storyboard in Resources */,
 				89905DE61C8500AC0094E109 /* Assets.xcassets in Resources */,
+				89B1584C1C87DB9400F02774 /* simple.plist in Resources */,
 				89905DE41C8500AC0094E109 /* Main.storyboard in Resources */,
+				89B1584B1C87DB9400F02774 /* hard.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B1584E1C87DBEC00F02774 /* SudokuPuzzle.swift in Sources */,
 				89905DE11C8500AC0094E109 /* ViewController.swift in Sources */,
 				89905DDF1C8500AC0094E109 /* AppDelegate.swift in Sources */,
 				89B158481C87BEC000F02774 /* ButtonsView.swift in Sources */,

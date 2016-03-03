@@ -85,6 +85,9 @@ class ButtonsView: UIView {
                 let button = self.viewWithTag(buttonTags[r][c])
                 button?.bounds = CGRectMake(0, 0, w, h)
                 button?.center = CGPointMake(x + w/2, y + h/2)
+                button?.layer.cornerRadius = 5
+                button?.layer.borderColor = UIColor.blackColor().CGColor
+                button?.layer.borderWidth = 3
                 x += w
             }
             y += h
