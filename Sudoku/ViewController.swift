@@ -28,8 +28,21 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let puzzle = appDelegate.sudoku
         
-        puzzle?.setNumber(sender.tag, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
-        self.puzzleView.setNeedsDisplay()
+        if(pencilEnabeled){
+            if(puzzle!.numberAtRow(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col) == 0){
+            if(puzzle!.isSetPencil(sender.tag - 1 , row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)){
+                puzzle!.clearPencil(sender.tag - 1, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
+            }else{
+                puzzle!.setPencil(sender.tag - 1, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
+            }
+            }
+            self.puzzleView.setNeedsDisplay()
+        }else {
+            if(!puzzle!.anyPencilSetAtRow(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)){
+                puzzle?.setNumber(sender.tag, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
+                self.puzzleView.setNeedsDisplay()
+            }
+        }
     }
     @IBAction func eraseButtonTapped(sender: AnyObject) {
         
@@ -38,8 +51,15 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let puzzle = appDelegate.sudoku
         
-        puzzle?.setNumber(0, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
-        self.puzzleView.setNeedsDisplay()
+        if(pencilEnabeled){
+            puzzle!.clearAllPencils(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
+            self.puzzleView.setNeedsDisplay()
+        }else{
+            if(!puzzle!.anyPencilSetAtRow(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)){
+                puzzle?.setNumber(0, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
+                self.puzzleView.setNeedsDisplay()
+            }
+        }
     }
     
     

@@ -125,7 +125,7 @@ class SudokuPuzzle {
     
     func anyPencilSetAtRow(row: Int, column: Int) -> Bool {
         for i in 0 ..< 9 {
-            if (!puzzle[row][column].pencils[i]) {
+            if (puzzle[row][column].pencils[i]) {
                 return true
             }
         }
@@ -167,6 +167,10 @@ class SudokuPuzzle {
             for j in 0 ..< 9{
                 if !puzzle[i][j].fixed {
                     puzzle[i][j].number = 0
+                    
+                    for k in 0 ..< 9 {
+                        puzzle[i][j].pencils[k] = false
+                    }
                 }
             }
         }

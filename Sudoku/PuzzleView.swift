@@ -30,7 +30,7 @@ class PuzzleView: UIView {
                     selectedSquare.col = col
                     selectedSquare.row = row
                     self.setNeedsDisplay()
-                    NSLog("set up the thing \(selectedSquare)")
+                    //NSLog("set up the thing \(selectedSquare)")
                 } else if row == selectedSquare.row && col == selectedSquare.col{
                     selectedSquare.row = -1
                     selectedSquare.col = -1
@@ -137,9 +137,32 @@ class PuzzleView: UIView {
                         let textRect = CGRectMake(x, y, textSize.width, textSize.height)
                         text.drawInRect(textRect, withAttributes: fixedAttributes)
                     }
-                    
-                    
+                } else {
+                    if puzzle!.anyPencilSetAtRow(i, column: j) {
+                        var k = 0
+                        for ii in 0 ..< 3 {
+                            for jj in 0 ..< 3{
+                                if puzzle!.isSetPencil(k, row: i, column: j) {
+                                    let boldFont = UIFont(name: "Helvetica-Bold", size: 10)
+                                    let fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.grayColor()]
+                                    let pencilNum = k + 1
+                                    let text : NSString = "\(pencilNum)"
+                                    let textSize = text.sizeWithAttributes(fixedAttributes)
+                                    let x = boardSquare.origin.x + CGFloat(j)*squareSize + CGFloat(jj)*(squareSize/3)
+                                        + 0.5*(squareSize/3 - textSize.width)
+                                    let y = boardSquare.origin.y + CGFloat(i)*squareSize + CGFloat(ii)*(squareSize/3)
+                                        + 0.5*(squareSize/3 - textSize.height)
+                                    let textRect = CGRectMake(x, y, textSize.width, textSize.height)
+                                    text.drawInRect(textRect, withAttributes: fixedAttributes)
+                                    
+                                }
+                                k++
+                            }
+                        }
+                        
+                    }
                 }
+                
             }
         }
         
