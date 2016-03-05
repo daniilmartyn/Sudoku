@@ -60,8 +60,16 @@ class ViewController: UIViewController {
         let puzzle = appDelegate.sudoku
         
         if(pencilEnabeled){
-            puzzle!.clearAllPencils(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
-            self.puzzleView.setNeedsDisplay()
+            let alert = UIAlertController(title: "Deleting all penciled in numbers", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "No!", style: .Cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default,
+                handler: {(UIAlertAction) -> Void in
+                    puzzle!.clearAllPencils(self.puzzleView.selectedSquare.row, column: self.puzzleView.selectedSquare.col)
+                    self.puzzleView.setNeedsDisplay()}))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }else{
             if(!puzzle!.anyPencilSetAtRow(puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)){
                 puzzle?.setNumber(0, row: puzzleView.selectedSquare.row, column: puzzleView.selectedSquare.col)
