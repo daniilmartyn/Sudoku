@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
     @IBOutlet weak var puzzleView: PuzzleView!
     @IBOutlet weak var buttonsView: ButtonsView!
     override func viewDidLoad() {

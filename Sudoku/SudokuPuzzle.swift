@@ -30,12 +30,78 @@ class SudokuPuzzle {
     }
     
     
-//    func savedState() -> NSArray{
-//    
-//    }
+    func savedState() -> NSArray{
+    
+        var archive : [[String : [Int]]] = []
+        
+        var cell : [String : [Int]] = [:]
+
+        
+        for i in 0 ..< 9{
+            for j in 0 ..< 9{
+                cell["number"] = [puzzle[i][j].number]
+                
+                if(puzzle[i][j].fixed){
+                    cell["fixed"] = [1]
+                }else{
+                    cell["fixed"] = [0]
+                }
+                
+                var pencils : [Int] = []
+                
+                for k in 0 ..< 9 {
+                    
+                    if puzzle[i][j].pencils[k] {
+                        pencils.append(1)
+                    }else {
+                        pencils.append(0)
+                    }
+                    
+                }
+                
+                cell["pencils"] = pencils
+                
+                archive.append(cell)
+            }
+        }
+        
+        
+        
+        return archive
+    }
     
     func setState(puzzleArray : NSArray) {
     
+        var cell : [String : [Int]] = [:]
+        
+        var count : Int = 0
+        
+        for i in 0 ..< 9 {
+            for j in 0 ..< 9{
+                
+                cell = puzzleArray[count] as! [String : [Int]]
+                puzzle[i][j].number = cell["number"]![0]
+                
+                if(cell["fixed"]![0] == 1){
+                    puzzle[i][j].fixed = true
+                }else{
+                    puzzle[i][j].fixed = false
+                }
+                
+                
+                for k in 0 ..< 9 {
+                    if (cell["pencils"]![k] == 1){
+                        puzzle[i][j].pencils[k] = true
+                    }else{
+                        puzzle[i][j].pencils[k] = false
+                    }
+                }
+                
+                count++
+            }
+        }
+        
+        
     }
     
     func loadPuzzle(puzzleString: String) {
