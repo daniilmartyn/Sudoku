@@ -43,6 +43,14 @@ class ViewController: UIViewController {
                 self.puzzleView.setNeedsDisplay()
             }
         }
+        
+        if (puzzle!.isSolved()) {
+            let alert = UIAlertController(title: "YOU WON!", message: "Yes, you really did.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     @IBAction func eraseButtonTapped(sender: AnyObject) {
         

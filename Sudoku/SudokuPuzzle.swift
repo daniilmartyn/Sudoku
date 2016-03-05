@@ -185,6 +185,26 @@ class SudokuPuzzle {
             }
         }
     }
+    
+    func isSolved() -> Bool{
+        for i in 0 ..< 9 {
+            for j in 0 ..< 9{
+                if puzzle[i][j].number == 0{
+                    return false
+                }
+            }
+        }
+        
+        for i in 0 ..< 9 {
+            for j in 0 ..< 9{
+                if self.isConflictingEntryAtRow(i, column: j){
+                    return false
+                }
+            }
+        }
+        
+        return true
+    }
 }
 
 
