@@ -13,9 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var sudoku : SudokuPuzzle?
+    
+    lazy var simplePuzzles = getPuzzles("simple")
+    lazy var hardPuzzles = getPuzzles("hard")
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.sudoku = SudokuPuzzle()
+        self.sudoku?.loadPuzzle(simplePuzzles[Int(arc4random_uniform(UInt32(simplePuzzles.count)))])
         return true
     }
 

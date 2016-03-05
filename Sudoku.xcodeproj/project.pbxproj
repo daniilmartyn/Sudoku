@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891FF3241C8A43B3003CA4E3 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FF3231C8A43B3003CA4E3 /* Cell.swift */; };
 		89905DDF1C8500AC0094E109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905DDE1C8500AC0094E109 /* AppDelegate.swift */; };
 		89905DE11C8500AC0094E109 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89905DE01C8500AC0094E109 /* ViewController.swift */; };
 		89905DE41C8500AC0094E109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89905DE21C8500AC0094E109 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		891FF3231C8A43B3003CA4E3 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		89905DDB1C8500AC0094E109 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89905DDE1C8500AC0094E109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89905DE01C8500AC0094E109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				89905E0C1C8515860094E109 /* PuzzleView.swift */,
 				89B158471C87BEC000F02774 /* ButtonsView.swift */,
 				89B1584D1C87DBEC00F02774 /* SudokuPuzzle.swift */,
+				891FF3231C8A43B3003CA4E3 /* Cell.swift */,
 				89905DE51C8500AC0094E109 /* Assets.xcassets */,
 				89905DE71C8500AC0094E109 /* LaunchScreen.storyboard */,
 				89B158491C87DB9400F02774 /* hard.plist */,
@@ -278,6 +281,7 @@
 				89905DDF1C8500AC0094E109 /* AppDelegate.swift in Sources */,
 				89B158481C87BEC000F02774 /* ButtonsView.swift in Sources */,
 				89905E0D1C8515860094E109 /* PuzzleView.swift in Sources */,
+				891FF3241C8A43B3003CA4E3 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

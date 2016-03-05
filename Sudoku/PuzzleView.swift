@@ -16,12 +16,17 @@ class PuzzleView: UIView {
         let location = sender.locationInView(self)
         let boardSquare = getBoardSquare()
         
+        
         if (CGRectContainsPoint(boardSquare, location)) {
             let squareSize = boardSquare.size.width/9
             let col = Int((location.x - boardSquare.origin.x)/squareSize)
             let row = Int((location.y - boardSquare.origin.y)/squareSize)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let puzzle = appDelegate.sudoku
+            
             if (0 ..< 9) ~= col && (0 ..< 9) ~= row {
-                if row != selectedSquare.row || col != selectedSquare.col {
+                if (!puzzle!.numberIsFixed(row, column: col)) {
                     selectedSquare.col = col
                     selectedSquare.row = row
                     self.setNeedsDisplay()
@@ -103,7 +108,42 @@ class PuzzleView: UIView {
             }
         }
         
+        
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let puzzle = appDelegate.sudoku
+        //////// drawing the digits now
+        
+        for i in 0 ..< 9{
+            for j in 0 ..< 9 {
+                let number = puzzle!.numberAtRow(i, column: j)
+                if number > 0 {
+                    if puzzle!.numberIsFixed(i, column: j){
+                        let boldFont = UIFont(name: "Helvetica-Bold", size: 30)
+                        let fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.blackColor()]
+                        let text : NSString = "\(number)"
+                        let textSize = text.sizeWithAttributes(fixedAttributes)
+                        let x = boardSquare.origin.x + CGFloat(j)*squareSize + 0.5*(squareSize - textSize.width)
+                        let y = boardSquare.origin.y + CGFloat(i)*squareSize + 0.5*(squareSize - textSize.height)
+                        let textRect = CGRectMake(x, y, textSize.width, textSize.height)
+                        text.drawInRect(textRect, withAttributes: fixedAttributes)
+                    }else {
+                        let boldFont = UIFont(name: "Helvetica-Bold", size: 30)
+                        let fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.redColor()]
+                        let text : NSString = "\(number)"
+                        let textSize = text.sizeWithAttributes(fixedAttributes)
+                        let x = boardSquare.origin.x + CGFloat(j)*squareSize + 0.5*(squareSize - textSize.width)
+                        let y = boardSquare.origin.y + CGFloat(i)*squareSize + 0.5*(squareSize - textSize.height)
+                        let textRect = CGRectMake(x, y, textSize.width, textSize.height)
+                        text.drawInRect(textRect, withAttributes: fixedAttributes)
+                    }
+                    
+                    
+                }
+            }
+        }
+        
+        
     }
-   
 
 }
